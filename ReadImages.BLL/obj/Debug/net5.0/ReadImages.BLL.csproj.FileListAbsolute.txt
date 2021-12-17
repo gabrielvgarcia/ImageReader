@@ -1,0 +1,13 @@
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\bin\Debug\net5.0\ReadImages.BLL.deps.json
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\bin\Debug\net5.0\ReadImages.BLL.dll
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\bin\Debug\net5.0\ref\ReadImages.BLL.dll
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\bin\Debug\net5.0\ReadImages.BLL.pdb
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ReadImages.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ReadImages.BLL.AssemblyInfoInputs.cache
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ReadImages.BLL.AssemblyInfo.cs
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ReadImages.BLL.csproj.CoreCompileInputs.cache
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ReadImages.BLL.dll
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ref\ReadImages.BLL.dll
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ReadImages.BLL.pdb
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ReadImages.BLL.csproj.AssemblyReference.cache
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\bin\Debug\net5.0\OcrData\Portuguese.ocrdata

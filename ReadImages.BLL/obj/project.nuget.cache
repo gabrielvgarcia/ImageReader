@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "rB/rrH5dYprW+Cs+BoNeH04136TX40Lmyw5WrgNfqHUph/aRPP4KnHbKzO7MghJxe6+TJQv+5gFM1zL2iRWBlw==",
+  "success": true,
+  "projectFilePath": "D:\\Projetos\\Tesseract\\ReadImages.API\\ReadImages.BLL\\ReadImages.BLL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\ironocr\\2021.11.0\\ironocr.2021.11.0.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\ironocr.languages.portuguese\\2020.11.2\\ironocr.languages.portuguese.2020.11.2.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

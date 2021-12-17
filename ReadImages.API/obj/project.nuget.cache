@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "4S86KSfpJsya7Xc1IE4KE88eiY54mP0r+p4kRvaJUrBCfcVK395E1ZcE4teXemjPr1lZz4qPTvO3Bzx1feFQQg==",
+  "success": true,
+  "projectFilePath": "D:\\Projetos\\Tesseract\\ReadImages.API\\ReadImages.API\\ReadImages.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\ironocr\\2021.11.0\\ironocr.2021.11.0.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\ironocr.languages.portuguese\\2020.11.2\\ironocr.languages.portuguese.2020.11.2.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "C:\\Users\\gabriel.garcia\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
