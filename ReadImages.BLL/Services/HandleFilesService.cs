@@ -2,6 +2,7 @@
 using ReadImages.BLL.Contracts;
 using System;
 using System.IO;
+using System.Linq;
 
 namespace ReadImages.BLL.Services
 {
@@ -25,9 +26,9 @@ namespace ReadImages.BLL.Services
             Ocr.Language = OcrLanguage.PortugueseBest;
             using (var Input = new OcrInput(documentPath))
             {
-                var Result = Ocr.Read(Input).Text;
+                string Result = Ocr.Read(Input).Text;
 
-                Result = Result.Replace("\n", "").Replace("\r", "").Replace(".", "").Replace(",", "").Replace(" ", "");
+                Result = new string(Result.Where(c => char.IsDigit(c)).ToArray());
 
                 File.Delete(documentPath);
 
