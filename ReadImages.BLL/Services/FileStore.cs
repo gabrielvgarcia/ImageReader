@@ -47,7 +47,7 @@ namespace ReadImages.BLL.Services
         {
             byte[] data = Convert.FromBase64String(cleandata);
 
-            string documentPath = Path.Combine(Environment.CurrentDirectory, @"..\ReadImages.BLL\TempImage\", fileName); ;
+            string documentPath = Path.Combine(Environment.CurrentDirectory, @"..\ReadImages.BLL\TempDocument\", fileName); ;
 
             if (fileName != "Document.pdf")
             {

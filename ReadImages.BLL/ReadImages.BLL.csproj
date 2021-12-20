@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="TempImage\" />
+    <Folder Include="TempDocument\" />
   </ItemGroup>
 
 </Project>
