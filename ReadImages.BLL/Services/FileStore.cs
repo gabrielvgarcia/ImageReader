@@ -11,42 +11,56 @@ namespace ReadImages.BLL.Services
         public string StoreFile(string base64)
         {
             string cleandata, fileName;
-            ImageFormat imageFormat;
+            ImageFormat imageFormat = null;
 
             if (base64.Contains("data:image/png;base64"))
             {
                 cleandata = base64.Replace("data:image/png;base64,", "");
-                fileName = "Image.png";
+                fileName = "Document.png";
                 imageFormat = ImageFormat.Png;
             }
             else if (base64.Contains("data:image/jpg;base64"))
             {
                 cleandata = base64.Replace("data:image/jpg;base64,", "");
-                fileName = "Image.jpg";
+                fileName = "Document.jpg";
                 imageFormat = ImageFormat.Jpeg;
             }
             else if (base64.Contains("data:image/jpeg;base64"))
             {
                 cleandata = base64.Replace("data:image/jpeg;base64,", "");
-                fileName = "Image.jpeg";
+                fileName = "Document.jpeg";
                 imageFormat = ImageFormat.Jpeg;
+            }
+            else if (base64.Contains("data:application/pdf;base64,"))
+            {
+                cleandata = base64.Replace("data:application/pdf;base64,", "");
+                fileName = "Document.pdf";
             }
             else
             {
                 return null;
             }
 
+            return SaveDocument(cleandata, fileName, imageFormat);
+        }
+        public string SaveDocument(string cleandata, string fileName, ImageFormat imageFormat = null)
+        {
             byte[] data = Convert.FromBase64String(cleandata);
 
-            MemoryStream ms = new MemoryStream(data);
+            string documentPath = Path.Combine(Environment.CurrentDirectory, @"..\ReadImages.BLL\TempImage\", fileName); ;
 
-            Image img = Image.FromStream(ms);
+            if (fileName != "Document.pdf")
+            {
+                MemoryStream ms = new(data);
 
-            string imagePath = Path.Combine(Environment.CurrentDirectory, @"..\ReadImages.BLL\TempImage\", fileName);
+                Image img = Image.FromStream(ms);
 
-            img.Save(imagePath, imageFormat);
+                img.Save(documentPath, imageFormat);
+            }
+            else
+                File.WriteAllBytes(documentPath, data);
 
-            return imagePath;
+            return documentPath;
         }
     }
 }

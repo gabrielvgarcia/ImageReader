@@ -14,7 +14,7 @@ namespace ReadImages.BLL.Services
         }
         public string HandleFileBase64(string base64)
         {
-            string imagePath = _fileStoreService.StoreFile(base64);
+            string documentPath = _fileStoreService.StoreFile(base64);
 
             var Ocr = new IronTesseract();
 
@@ -23,13 +23,13 @@ namespace ReadImages.BLL.Services
             Ocr.Configuration.TesseractVersion = TesseractVersion.Tesseract5;
             Ocr.Configuration.EngineMode = TesseractEngineMode.LstmOnly;
             Ocr.Language = OcrLanguage.PortugueseBest;
-            using (var Input = new OcrInput(imagePath))
+            using (var Input = new OcrInput(documentPath))
             {
                 var Result = Ocr.Read(Input).Text;
 
                 Result = Result.Replace("\n", "").Replace("\r", "").Replace(".", "").Replace(",", "").Replace(" ", "");
 
-                File.Delete(imagePath);
+                File.Delete(documentPath);
 
                 string start = FindGateway(Result);
 
