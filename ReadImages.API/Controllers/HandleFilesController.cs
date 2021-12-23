@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ReadImages.BLL;
 using ReadImages.BLL.Contracts;
 
 namespace ReadImages.API.Controllers
@@ -12,10 +11,12 @@ namespace ReadImages.API.Controllers
 
         public HandleFilesController(IHandleFilesService handleFilesService)
         {
-            this._handleFilesService = handleFilesService;
+            _handleFilesService = handleFilesService;
         }
 
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult Handle([FromBody] string base64)
         {
             var response = _handleFilesService.HandleFileBase64(base64);

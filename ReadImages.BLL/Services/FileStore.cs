@@ -1,4 +1,6 @@
 ﻿using ReadImages.BLL.Contracts;
+using ReadImages.DTO.Enums;
+using ReadImages.DTO.Extensions;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -10,38 +12,39 @@ namespace ReadImages.BLL.Services
     {
         public string StoreFile(string base64)
         {
-            string cleandata, fileName;
+            string cleandata, fileName, type;
             ImageFormat imageFormat = null;
 
-            if (base64.Contains("data:image/png;base64"))
+            type = FindType(base64);
+
+            switch (type.ToEnum<EnumDocumentType>())
             {
-                cleandata = base64.Replace("data:image/png;base64,", "");
-                fileName = "Document.png";
-                imageFormat = ImageFormat.Png;
-            }
-            else if (base64.Contains("data:image/jpg;base64"))
-            {
-                cleandata = base64.Replace("data:image/jpg;base64,", "");
-                fileName = "Document.jpg";
-                imageFormat = ImageFormat.Jpeg;
-            }
-            else if (base64.Contains("data:image/jpeg;base64"))
-            {
-                cleandata = base64.Replace("data:image/jpeg;base64,", "");
-                fileName = "Document.jpeg";
-                imageFormat = ImageFormat.Jpeg;
-            }
-            else if (base64.Contains("data:application/pdf;base64,"))
-            {
-                cleandata = base64.Replace("data:application/pdf;base64,", "");
-                fileName = "Document.pdf";
-            }
-            else
-            {
-                return null;
+                case EnumDocumentType.PNG:
+                    cleandata = base64.Replace(EnumDocumentType.PNG.GetDescription(), "");
+                    fileName = "Document.png";
+                    imageFormat = ImageFormat.Png;
+                    break;
+                case EnumDocumentType.JPG:
+                    cleandata = base64.Replace(EnumDocumentType.JPG.GetDescription(), "");
+                    fileName = "Document.jpg";
+                    imageFormat = ImageFormat.Jpeg;
+                    break;
+                case EnumDocumentType.JPEG:
+                    cleandata = base64.Replace(EnumDocumentType.JPEG.GetDescription(), "");
+                    fileName = "Document.jpeg";
+                    imageFormat = ImageFormat.Jpeg;
+                    break;
+                case EnumDocumentType.PDF:
+                    cleandata = base64.Replace(EnumDocumentType.PDF.GetDescription(), "");
+                    fileName = "Document.pdf";
+                    break;
+
+                default:
+                    throw new Exception(MappedErrors.DOCUMENTINVALID.GetDescription());
             }
 
             return SaveDocument(cleandata, fileName, imageFormat);
+
         }
         public string SaveDocument(string cleandata, string fileName, ImageFormat imageFormat = null)
         {
@@ -61,6 +64,16 @@ namespace ReadImages.BLL.Services
                 File.WriteAllBytes(documentPath, data);
 
             return documentPath;
+        }
+        public string FindType(string base64)
+        {
+            int start = base64.IndexOf(";base64,", 0) + 8;
+            string response = base64.Remove(start);
+
+            if (response == null)
+                throw new Exception(MappedErrors.DOCUMENTINVALID.GetDescription());
+
+            return response;
         }
     }
 }

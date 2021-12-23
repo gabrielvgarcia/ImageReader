@@ -13,4 +13,8 @@
     <Folder Include="TempDocument\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ReadImages.DTO\ReadImages.DTO.csproj" />
+  </ItemGroup>
+
 </Project>

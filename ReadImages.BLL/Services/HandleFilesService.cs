@@ -1,5 +1,7 @@
 ﻿using IronOcr;
 using ReadImages.BLL.Contracts;
+using ReadImages.DTO.Enums;
+using ReadImages.DTO.Extensions;
 using System;
 using System.IO;
 using System.Linq;
@@ -43,10 +45,10 @@ namespace ReadImages.BLL.Services
         {
             if (strSource.Contains(strStart))
             {
-                int Start, End;
-                Start = strSource.IndexOf(strStart, 0) + strStart.Length - 4;
-                End = Start + 47;
-                return strSource.Substring(Start, End - Start);
+                int start, end;
+                start = strSource.IndexOf(strStart, 0) + strStart.Length - 4;
+                end = start + 47;
+                return strSource.Substring(start, end - start);
             }
 
             return "";
@@ -56,10 +58,10 @@ namespace ReadImages.BLL.Services
         {
             _ = strSource switch
             {
-                string when strSource.Contains("0019") => strSource = "0019",
-                string when strSource.Contains("0339") => strSource = "0339",
-                string when strSource.Contains("7489") => strSource = "7489",
-                _ => throw new NotImplementedException()
+                string when strSource.Contains(GatewayType.BB.GetDescription()) => strSource = GatewayType.BB.GetDescription(),
+                string when strSource.Contains(GatewayType.SANTANDER.GetDescription()) => strSource = GatewayType.SANTANDER.GetDescription(),
+                string when strSource.Contains(GatewayType.SICREDI.GetDescription()) => strSource = GatewayType.SICREDI.GetDescription(),
+                _ => throw new Exception(MappedErrors.GATEWAYNOTFOUND.GetDescription())
             };
 
             return strSource;

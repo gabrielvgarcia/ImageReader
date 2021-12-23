@@ -6,5 +6,6 @@ namespace ReadImages.BLL.Contracts
     {
         public string StoreFile(string base64);
         public string SaveDocument(string cleandata, string fileName, ImageFormat imageFormat = null);
+        public string FindType(string base64);
     }
 }

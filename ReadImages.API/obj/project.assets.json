@@ -151,13 +151,24 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "IronOcr": "2021.11.0",
-          "IronOcr.Languages.Portuguese": "2020.11.2"
+          "IronOcr.Languages.Portuguese": "2020.11.2",
+          "ReadImages.DTO": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ReadImages.BLL.dll": {}
         },
         "runtime": {
           "bin/placeholder/ReadImages.BLL.dll": {}
+        }
+      },
+      "ReadImages.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ReadImages.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ReadImages.DTO.dll": {}
         }
       }
     }
@@ -394,6 +405,11 @@
       "type": "project",
       "path": "../ReadImages.BLL/ReadImages.BLL.csproj",
       "msbuildProject": "../ReadImages.BLL/ReadImages.BLL.csproj"
+    },
+    "ReadImages.DTO/1.0.0": {
+      "type": "project",
+      "path": "../ReadImages.DTO/ReadImages.DTO.csproj",
+      "msbuildProject": "../ReadImages.DTO/ReadImages.DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {

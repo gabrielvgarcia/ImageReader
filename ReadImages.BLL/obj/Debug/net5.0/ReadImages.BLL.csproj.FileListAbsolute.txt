@@ -11,3 +11,6 @@ D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ref\ReadIma
 D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ReadImages.BLL.pdb
 D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ReadImages.BLL.csproj.AssemblyReference.cache
 D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\bin\Debug\net5.0\OcrData\Portuguese.ocrdata
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\bin\Debug\net5.0\ReadImages.DTO.dll
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\bin\Debug\net5.0\ReadImages.DTO.pdb
+D:\Projetos\Tesseract\ReadImages.API\ReadImages.BLL\obj\Debug\net5.0\ReadImages.BLL.csproj.CopyComplete

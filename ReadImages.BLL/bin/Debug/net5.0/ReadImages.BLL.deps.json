@@ -9,7 +9,8 @@
       "ReadImages.BLL/1.0.0": {
         "dependencies": {
           "IronOcr": "2021.11.0",
-          "IronOcr.Languages.Portuguese": "2020.11.2"
+          "IronOcr.Languages.Portuguese": "2020.11.2",
+          "ReadImages.DTO": "1.0.0"
         },
         "runtime": {
           "ReadImages.BLL.dll": {}
@@ -75,6 +76,11 @@
             "fileVersion": "5.0.421.11614"
           }
         }
+      },
+      "ReadImages.DTO/1.0.0": {
+        "runtime": {
+          "ReadImages.DTO.dll": {}
+        }
       }
     }
   },
@@ -118,6 +124,11 @@
       "sha512": "sha512-rvr/M1WPf24ljpvvrVd74+NdjRUJu1bBkspkZcnzSZnmAUQWSvanlQ0k/hVHk+cHufZbZfu7vOh/vYc0q5Uu/A==",
       "path": "system.drawing.common/5.0.2",
       "hashPath": "system.drawing.common.5.0.2.nupkg.sha512"
+    },
+    "ReadImages.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
